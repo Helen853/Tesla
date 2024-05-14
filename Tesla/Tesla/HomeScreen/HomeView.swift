@@ -12,6 +12,8 @@ struct HomeView: View {
         static let colorGraundName = "element"
         static let carName = "Tesla"
         static let kmText = "187 km"
+        static let batteryName = "battery.75"
+        static let personName = "person"
     }
     
     @State var tagSelected = 0
@@ -24,7 +26,7 @@ struct HomeView: View {
                 controlPanel
                 Spacer()
             }
-        }
+        }.navigationBarBackButtonHidden(true)
     }
     
     private var gradient: LinearGradient {
@@ -87,11 +89,21 @@ struct HomeView: View {
                 Text(Constants.carName)
                     .font(.system(size: 28, weight: .bold))
                     .foregroundColor(.white)
-                Text(Constants.kmText)
-                    .font(.system(size: 17, weight: .semibold))
-                    .opacity(0.4)
+                HStack {
+                    Image(systemName: Constants.batteryName)
+                        .foregroundColor(.gray)
+                    Text(Constants.kmText)
+                        .font(.system(size: 17, weight: .semibold))
+                        .opacity(0.4)
+                }
+                
             }
             Spacer()
+            Image(Constants.personName)
+                .resizable(resizingMode: .stretch)
+                .foregroundColor(.gray)
+                .frame(width: 35, height: 35)
+                .neumorphismStrokeSelectedCircleStyle()
         }.padding(.all, 25)
     }
     

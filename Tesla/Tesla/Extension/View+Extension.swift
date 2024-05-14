@@ -24,4 +24,8 @@ extension View {
     func neumorphismStrokeCircle() -> some View {
         modifier(NeumorphismStrokeCircle())
     }
+    
+    func measureSize() -> some View {
+        modifier(MeasureSizeModifier())
+    }
 }

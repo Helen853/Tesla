@@ -23,9 +23,13 @@ struct ClimateView: View {
         static let fanText = "Fan"
         static let heatText = "Heat"
         static let autoText = "Auto"
+        static let sliderName = "Knob"
     }
     
+    @Environment(\.presentationMode) var presentatin
+    
     @State var progress = 0.0
+    @State var showPahel = true
     
     var body: some View {
         backgroundStackView {
@@ -41,7 +45,7 @@ struct ClimateView: View {
     private var topView: some View {
         HStack {
             Button {
-                print("f")
+                presentatin.wrappedValue.dismiss()
             } label: {
                 Image(Constants.backName)
                     .frame(width: 40, height: 40)
@@ -66,7 +70,7 @@ struct ClimateView: View {
     private var climateCircle: some View {
         ZStack {
             Circle()
-                .frame(width: 168, height: 168)
+                .frame(width: 168.2, height: 168.2)
                 .overlay {
                     Circle()
                         .fill(
@@ -93,31 +97,39 @@ struct ClimateView: View {
     }
     
     private var climatePanel: some View {
-        VStack {
-            makePanel(text: Constants.acText, image: Constants.snowflakeName)
-            makePanel(text: Constants.fanText, image: Constants.windName)
-            makePanel(text: Constants.heatText, image: Constants.humidityName)
-            makePanel(text: Constants.autoText, image: Constants.timerName)
-
-        }
+        DisclosureGroup(" ", isExpanded: $showPahel) {
+            VStack {
+                makePanel(text: Constants.acText, image: Constants.snowflakeName)
+                makePanel(text: Constants.fanText, image: Constants.windName)
+                makePanel(text: Constants.heatText, image: Constants.humidityName)
+                makePanel(text: Constants.autoText, image: Constants.timerName)
+            }
+        }.padding()
+        
     }
     
-    func makePanel(text: String, image: String) -> some View {
+    private func makePanel(text: String, image: String) -> some View {
         HStack {
             Text(text)
                 .foregroundColor(.gray)
                 .font(.system(size: 17))
+                .frame(alignment: .leading)
+            Spacer()
             Button {
                 print("g")
             } label: {
                 Image(systemName: image)
                     .foregroundColor(.gray)
-                    .frame(width: 40, height: 40)
+                    .frame(width: 20, height: 20)
                     .neumorphismStrokeSelectedCircleStyle()
             }
             Slider(value: $progress)
                 .frame(width: 192)
-        }
+                .onAppear {
+                    UISlider.appearance().setThumbImage(UIImage(named: Constants.sliderName), for: .normal)
+                }
+                .measureSize()
+        }.padding(.leading, 40)
     }
     
     func backgroundStackView<Content: View>(content: () -> Content) -> some View {

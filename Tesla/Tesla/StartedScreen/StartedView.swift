@@ -28,27 +28,38 @@ struct StartedView: View {
     
     @State private var isLock = true
     @State private var isShowCar = false
+    @State private var isLoading = true
     
     var body: some View {
         NavigationView {
-            backgroundStackView {
-                VStack {
-                    settingsButton
-                        .padding(.trailing, 15)
-                    Spacer()
-                    welcomeText
-                    if isLock {
-                        carUnlockImage
-                        Spacer()
-                            .frame(height: 59)
-                    } else {
-                        Spacer()
-                            .frame(height: 63.04)
-                        carLockImage
+            if isLoading {
+                LoadView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            self.isLoading = false
+                        }
                     }
-                    Spacer()
-                    lockButton
-                    Spacer()
+            } else {
+                backgroundStackView {
+                   
+                    VStack {
+                        settingsButton
+                            .padding(.trailing, 15)
+                        Spacer()
+                        welcomeText
+                        if isLock {
+                            carUnlockImage
+                            Spacer()
+                                .frame(height: 59)
+                        } else {
+                            Spacer()
+                                .frame(height: 63.04)
+                            carLockImage
+                        }
+                        Spacer()
+                        lockButton
+                        Spacer()
+                    }
                 }
             }
         }
@@ -88,7 +99,7 @@ struct StartedView: View {
             } label: {
                 Image(systemName: Constants.settingsName)
                     .foregroundColor(.gray)
-                    .frame(width: 40, height: 40)
+                    .frame(width: 35, height: 35)
                     .neumorphismStrokeSelectedCircleStyle()
             }
         }

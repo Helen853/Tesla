@@ -36,20 +36,21 @@ struct NeumorphismStroketSelectedCircle: ViewModifier {
             .background {
                 ZStack {
                     RadialGradient(
-                        colors: [Color("dark").opacity(0.35), Color("light").opacity(0.45)],
-                        center: .topLeading,
-                        startRadius: 0,
-                        endRadius: 80)
+                        colors: [Color("dark").opacity(0.35), .clear],
+                        center: .top,
+                        startRadius: 40,
+                        endRadius: 20)
                     Circle()
                         .fill(LinearGradient(
                             stops: [
-                                .init(color: Color("light"), location: 0),
-                                .init(color: Color("dark"), location: 1.5)
+                                .init(color: Color("light"), location: 0.2),
+                                .init(color: Color("dark"), location: 0.7)
                             ],
                             startPoint: .topLeading,
                             endPoint: .bottomTrailing)
                               )
                         .padding(2)
+                        .neumorphismUnSelectedStyle()
                         
                     Circle()
                         .stroke(LinearGradient(
@@ -57,8 +58,6 @@ struct NeumorphismStroketSelectedCircle: ViewModifier {
                             startPoint: .top,
                             endPoint: .bottomTrailing), lineWidth: 2)
                 }
-                
-                
             }.clipShape(Circle())
             
             .shadow(color: Color("dark"), radius: 7, x: 10, y: 10)
