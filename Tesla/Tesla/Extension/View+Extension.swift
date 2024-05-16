@@ -25,7 +25,15 @@ extension View {
         modifier(NeumorphismStrokeCircle())
     }
     
-    func measureSize() -> some View {
-        modifier(MeasureSizeModifier())
+    func neumorphismBlueButton() -> some View {
+        modifier(NeumorphismBlueButton())
+    }
+    
+    func myTabItem(_ label: () -> TabItem) -> some View {
+        modifier(TabItemModifire(tabBarItem: label()))
+    }
+    
+    func neumorphismCapsuleBlueButton() -> some View {
+        modifier(NeumorphismCapsuleBlueButton())
     }
 }

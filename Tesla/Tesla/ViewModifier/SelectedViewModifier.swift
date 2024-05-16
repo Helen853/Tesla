@@ -43,7 +43,7 @@ struct NeumorphismStroketSelectedCircle: ViewModifier {
                     Circle()
                         .fill(LinearGradient(
                             stops: [
-                                .init(color: Color("light"), location: 0.2),
+                                .init(color: Color("startRadial"), location: 0.2),
                                 .init(color: Color("dark"), location: 0.7)
                             ],
                             startPoint: .topLeading,
@@ -51,15 +51,13 @@ struct NeumorphismStroketSelectedCircle: ViewModifier {
                               )
                         .padding(2)
                         .neumorphismUnSelectedStyle()
-                        
                     Circle()
                         .stroke(LinearGradient(
-                            colors: [Color("dark"), Color("light")],
+                            colors: [Color("dark"), Color("startRadial")],
                             startPoint: .top,
                             endPoint: .bottomTrailing), lineWidth: 2)
                 }
             }.clipShape(Circle())
-            
             .shadow(color: Color("dark"), radius: 7, x: 10, y: 10)
             .shadow(color: Color("light"), radius: 7, x: -10, y: -10)
             
@@ -80,5 +78,69 @@ struct NeumorphismStrokeCircle: ViewModifier {
             )
             .shadow(color: Color("light"), radius: 5, x: -10, y: -10)
             
+    }
+}
+
+struct NeumorphismBlueButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(15)
+            .background {
+                ZStack {
+                    RadialGradient(
+                        colors: [Color("darkBlueButton").opacity(0.35), .clear],
+                        center: .top,
+                        startRadius: 40,
+                        endRadius: 20)
+                    Circle()
+                        .fill(LinearGradient(
+                            stops: [
+                                .init(color: Color("lightBlueButton"), location: 0.2),
+                                .init(color: Color("darkBlueButton"), location: 0.7)
+                            ],
+                            startPoint: .bottomTrailing,
+                            endPoint: .topLeading)
+                              )
+                        .padding(2)
+                        .neumorphismUnSelectedStyle()
+                    Circle()
+                        .stroke(LinearGradient(
+                            colors: [Color("darkBlueButton"), Color("lightBlueButton")],
+                            startPoint: .top,
+                            endPoint: .bottomTrailing), lineWidth: 2)
+                }
+            }.clipShape(Circle())
+    }
+}
+
+struct NeumorphismCapsuleBlueButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(15)
+            .background {
+                ZStack {
+                    RadialGradient(
+                        colors: [Color("darkBlueButton").opacity(0.35), .clear],
+                        center: .top,
+                        startRadius: 40,
+                        endRadius: 20)
+                    Capsule()
+                        .fill(LinearGradient(
+                            stops: [
+                                .init(color: Color("lightBlueButton"), location: 0.2),
+                                .init(color: Color("darkBlueButton"), location: 0.7)
+                            ],
+                            startPoint: .bottomTrailing,
+                            endPoint: .topLeading)
+                              )
+                        .padding(2)
+                        .neumorphismUnSelectedStyle()
+                    Capsule()
+                        .stroke(LinearGradient(
+                            colors: [Color("darkBlueButton"), Color("lightBlueButton")],
+                            startPoint: .top,
+                            endPoint: .bottomTrailing), lineWidth: 2)
+                }
+            }.clipShape(Capsule())
     }
 }

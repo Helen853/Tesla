@@ -16,8 +16,6 @@ struct HomeView: View {
         static let personName = "person"
     }
     
-    @State var tagSelected = 0
-    
     var body: some View {
         backgroundStackView {
             VStack {
@@ -28,6 +26,8 @@ struct HomeView: View {
             }
         }.navigationBarBackButtonHidden(true)
     }
+    
+    @State private var tagSelected = 0
     
     private var gradient: LinearGradient {
         LinearGradient(
@@ -41,15 +41,7 @@ struct HomeView: View {
                     NavigationLink {
                         ClimateView()
                     } label: {
-                        Image("\(index)")
-                            .resizable()
-                            .frame(width: 44, height: 44)
-                            .neumorphismSelectedCircleStyle()
-                            .overlay {
-                                Circle()
-                                    .stroke(gradient, lineWidth: 2)
-                                    .opacity(tagSelected == index ? 1 : 0)
-                            }
+                        makeImage(index: index)
                     }
                 } else {
                     Button {
@@ -57,15 +49,7 @@ struct HomeView: View {
                             tagSelected = index
                         }
                     } label: {
-                        Image("\(index)")
-                            .resizable()
-                            .frame(width: 44, height: 44)
-                            .neumorphismSelectedCircleStyle()
-                            .overlay {
-                                Circle()
-                                    .stroke(gradient, lineWidth: 2)
-                                    .opacity(tagSelected == index ? 1 : 0)
-                            }
+                        makeImage(index: index)
                     }
                 }
             }
@@ -96,18 +80,16 @@ struct HomeView: View {
                         .font(.system(size: 17, weight: .semibold))
                         .opacity(0.4)
                 }
-                
             }
             Spacer()
             Image(Constants.personName)
-                .resizable(resizingMode: .stretch)
                 .foregroundColor(.gray)
-                .frame(width: 35, height: 35)
+                .frame(width: 26, height: 25)
                 .neumorphismStrokeSelectedCircleStyle()
         }.padding(.all, 25)
     }
     
-    func backgroundStackView<Content: View>(content: () -> Content) -> some View {
+    private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
         ZStack {
             Rectangle()
                 .fill(Color(Constants.colorGraundName))
@@ -115,6 +97,18 @@ struct HomeView: View {
                 .edgesIgnoringSafeArea(.all)
             content()
         }
+    }
+    
+    private func makeImage(index: Int) -> some View {
+        Image("\(index)")
+            .resizable()
+            .frame(width: 44, height: 44)
+            .neumorphismSelectedCircleStyle()
+            .overlay {
+                Circle()
+                    .stroke(gradient, lineWidth: 2)
+                    .opacity(tagSelected == index ? 1 : 0)
+            }
     }
 }
 

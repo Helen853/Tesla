@@ -26,10 +26,6 @@ struct StartedView: View {
         static let endUnlockColor = "enUnlockColor"
     }
     
-    @State private var isLock = true
-    @State private var isShowCar = false
-    @State private var isLoading = true
-    
     var body: some View {
         NavigationView {
             if isLoading {
@@ -41,7 +37,6 @@ struct StartedView: View {
                     }
             } else {
                 backgroundStackView {
-                   
                     VStack {
                         settingsButton
                             .padding(.trailing, 15)
@@ -64,6 +59,10 @@ struct StartedView: View {
             }
         }
     }
+    
+    @State private var isLock = true
+    @State private var isShowCar = false
+    @State private var isLoading = true
     
     private var welcomeText: some View {
         VStack {
@@ -95,7 +94,7 @@ struct StartedView: View {
         HStack {
             Spacer()
             NavigationLink {
-                HomeView()
+                Tab()
             } label: {
                 Image(systemName: Constants.settingsName)
                     .foregroundColor(.gray)
@@ -131,16 +130,7 @@ struct StartedView: View {
             HStack(spacing: 25) {
                 Text(isLock ? Constants.unLockText : Constants.lockText)
                     .foregroundColor (.white)
-                LinearGradient(
-                    colors: [Color(Constants.startColor), Color(Constants.endColor)], startPoint: .bottom, endPoint: .top)
-                .mask(
-                    Image(systemName: isLock ? Constants.unlockName : Constants.lockName)
-                        .renderingMode(.template)
-                    )
-                .shadow(color: Color(Constants.startColor).opacity(0.5), radius: 10, x: -5, y: -5)
-                .shadow(color: Color(Constants.endColor).opacity(0.5), radius: 10, x: 5, y: 5)
-                
-                .frame(width: 30, height: 30)
+                gradientImage
                 .neumorphismStrokeSelectedCircleStyle()
             }.padding()
                 .background(
@@ -151,7 +141,19 @@ struct StartedView: View {
         }
     }
     
-    func backgroundStackView<Content: View>(content: () -> Content) -> some View {
+    private var gradientImage: some View {
+        LinearGradient(
+            colors: [Color(Constants.startColor), Color(Constants.endColor)], startPoint: .bottom, endPoint: .top)
+        .mask(
+            Image(systemName: isLock ? Constants.unlockName : Constants.lockName)
+                .renderingMode(.template)
+        )
+        .shadow(color: Color(Constants.startColor).opacity(0.5), radius: 10, x: -5, y: -5)
+        .shadow(color: Color(Constants.endColor).opacity(0.5), radius: 10, x: 5, y: 5)
+        .frame(width: 30, height: 30)
+    }
+    
+    private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
         ZStack {
             Rectangle()
                 .fill(
