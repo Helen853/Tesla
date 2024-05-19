@@ -36,6 +36,8 @@ struct CustomTabView<Content: View>: View {
     
     @State private var tabs: [TabItem] = []
     
+    @Namespace private var tabSpace
+    
     private var content: Content
     
     private var tabsView: some View {
@@ -53,6 +55,7 @@ struct CustomTabView<Content: View>: View {
                         Circle()
                             .fill(LinearGradient(colors: [Color("endColor").opacity(0.7), Color("startColor").opacity(0.7)], startPoint: .bottom, endPoint: .top))
                             .frame(width: 40, height: 40)
+                            .matchedGeometryEffect(id: "tabSpace", in: tabSpace)
                             .blur(radius: 20)
                             .offset(x: index == 1 ? -40 : 0)
                     }

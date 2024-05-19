@@ -144,3 +144,52 @@ struct NeumorphismCapsuleBlueButton: ViewModifier {
             }.clipShape(Capsule())
     }
 }
+
+struct NeumorphismBattery: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .overlay {
+                ZStack {
+                    RadialGradient(
+                        colors: [Color("dark").opacity(0.35), .clear],
+                        center: .top,
+                        startRadius: 40,
+                        endRadius: 20)
+                    BatteryView()
+                        .fill(LinearGradient(
+                            stops: [
+                                .init(color: Color("startRadial"), location: 0.2),
+                                .init(color: Color("light"), location: 0.7)
+                            ],
+                            startPoint: .top,
+                            endPoint: .bottom)
+                        )
+                        .padding(2)
+                        .neumorphismUnSelectedStyle()
+                    BatteryView()
+                        .stroke(LinearGradient(
+                            colors: [Color("dark"), Color("startRadial")],
+                            startPoint: .top,
+                            endPoint: .bottomTrailing), lineWidth: 2)
+                }
+            }.clipShape(BatteryView())
+            .shadow(color: Color("dark"), radius: 7, x: 10, y: 10)
+            .shadow(color: Color("light"), radius: 7, x: -10, y: -10)
+    }
+}
+
+struct NeumorphismRectangle: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .overlay {
+                    RoundedRectangle(cornerRadius: 35)
+                        .stroke(Color.gray, lineWidth: 10)
+                        .shadow(color: .black.opacity(0.8), radius: 6, x: 6, y: 6)
+                        .shadow(color: .white.opacity(0.1), radius: 5, x: -5, y: -5)
+                        .clipShape(RoundedRectangle(cornerRadius: 35).inset(by: 5.1))
+
+            }
+            
+    }
+}
+

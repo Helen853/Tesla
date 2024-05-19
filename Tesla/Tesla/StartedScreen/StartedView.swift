@@ -31,7 +31,7 @@ struct StartedView: View {
             if isLoading {
                 LoadView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 11) {
                             self.isLoading = false
                         }
                     }
@@ -122,7 +122,7 @@ struct StartedView: View {
     
     private var lockButton: some View {
         Button {
-            withAnimation(.linear(duration: 1)) {
+            withAnimation(.linear(duration: 0.8)) {
                 isLock.toggle()
                 isShowCar.toggle()
             }

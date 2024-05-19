@@ -37,10 +37,8 @@ struct Tab: View {
                     TabItem(icount: Constants.personName)
                 }
                 .opacity(selection == 3 ? 1 : 0)
-
         }
     }
-    
     @State private var selection = 0
 }
 

@@ -22,9 +22,7 @@ struct LogoView: Shape {
         path.addCurve(to: CGPoint(x: 0.044 * width, y: 0.18313 * height), control1: CGPoint(x: 0.17859 * width, y: 0.28437 * height), control2: CGPoint(x: 0.08906 * width, y: 0.25134 *  height))
         path.addCurve(to: CGPoint(x: 0.39687 * width, y: 0.0975 * height), control1: CGPoint(x: 0.22009 * width, y: 0.10125 * height), control2: CGPoint(x: 0.39687 * width, y: 0.0975 * height))
         path.addLine(to: CGPoint(x: 0.50006 * width, y: 0.22347 * height))
-        path.addLine(to: CGPoint(x: 0.49991 * width, y: 0.22347 * height))
-        path.addLine(to: CGPoint(x: 0.5 * width, y: 0.22347 * height))
-        path.closeSubpath()
+        path.addLine(to: CGPoint(x: 0.60319 * width, y: 0.09734 * height))
         
         path.move(to: CGPoint(x: 0.5 * width, y: 0.06103 * height))
         path.addCurve(to: CGPoint(x: 0.972 * width, y: 0.15591 * height), control1: CGPoint(x: 0.64225*width, y: 0.05972 * height), control2: CGPoint(x: 0.80519 * width, y: 0.083 * height))

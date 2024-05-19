@@ -151,7 +151,6 @@ struct ClimateView: View {
                         
                 }
                 .shadow(color: Color("endColor").opacity(0.04), radius: 30, x:  -50, y:  -10)
-            
             Circle()
                 .frame(width: 119, height: 119)
                 .overlay {
@@ -197,7 +196,7 @@ struct ClimateView: View {
             }
             Spacer()
                 .frame(width: 16)
-            ClimateSlider(firstValue: $progressTemperature, range: range, color: selectedColor)
+            CustomSlider(firstValue: $progressTemperature, range: range, color: selectedColor, nameImage: Constants.sliderName)
                 .frame(width: 192)
         }
     }
@@ -258,7 +257,7 @@ struct ClimateView: View {
             }
             Spacer()
                 .frame(width: 15)
-            ClimateSlider(firstValue: $progress, range: range, color: selectedColor)
+            CustomSlider(firstValue: $progress, range: range, color: selectedColor, nameImage: Constants.sliderName)
                 .frame(width: 192)
         }.padding(.leading, 40)
     }

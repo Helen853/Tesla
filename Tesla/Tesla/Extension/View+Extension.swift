@@ -36,4 +36,12 @@ extension View {
     func neumorphismCapsuleBlueButton() -> some View {
         modifier(NeumorphismCapsuleBlueButton())
     }
+    
+    func neumorphismBattery() -> some View {
+        modifier(NeumorphismBattery())
+    }
+    
+    func neumorphismRectangle() -> some View {
+        modifier(NeumorphismRectangle())
+    }
 }

@@ -4,7 +4,7 @@
 
 import SwiftUI
 
-struct ClimateSlider: View {
+struct CustomSlider: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
@@ -26,7 +26,7 @@ struct ClimateSlider: View {
                 Capsule()
                     .frame(width: getSelectWidth(in: geometry), height: 10)
                     .foregroundStyle(color)
-                Image("Knob")
+                Image(nameImage)
                     .frame(width: 27, height: 15)
                     .frame(width: thumbRadius, height: thumbRadius)
                     .offset(x: getPosition(in: geometry, of: thumbValue))
@@ -52,12 +52,14 @@ struct ClimateSlider: View {
     private let rangeLength: Float
     private let thumbRadius: CGFloat = 16
     private let color: Color
+    private let nameImage: String
 
-    init(firstValue: Binding<Float>, range: ClosedRange<Float>, color: Color) {
+    init(firstValue: Binding<Float>, range: ClosedRange<Float>, color: Color, nameImage: String) {
         self.range = range
         rangeLength = range.upperBound - range.lowerBound
         _thumbValue = firstValue
         self.color = color
+        self.nameImage = nameImage
     }
 
     private func getPosition(in geometry: GeometryProxy, of thumbValue: Float) -> CGFloat {
