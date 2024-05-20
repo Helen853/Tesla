@@ -7,18 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED308F792BF3C61100661CB9 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED308F782BF3C61100661CB9 /* LoadView.swift */; };
+		ED308F7C2BF3F27500661CB9 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED308F7B2BF3F27500661CB9 /* CustomSlider.swift */; };
+		ED308F7E2BF4842100661CB9 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED308F7D2BF4842100661CB9 /* BottomSheet.swift */; };
+		ED308F812BF4BCAA00661CB9 /* ClimateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED308F802BF4BCAA00661CB9 /* ClimateViewModel.swift */; };
+		ED75D0422BF27D4A00498778 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75D0412BF27D4A00498778 /* Gradient.swift */; };
+		ED75D0452BF2811300498778 /* SelectedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75D0442BF2811300498778 /* SelectedViewModifier.swift */; };
+		ED75D0482BF2813600498778 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75D0472BF2813600498778 /* View+Extension.swift */; };
+		ED75D04B2BF28A6000498778 /* StartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75D04A2BF28A6000498778 /* StartedView.swift */; };
+		ED75D04E2BF29F6A00498778 /* ClimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75D04D2BF29F6A00498778 /* ClimateView.swift */; };
+		ED974E1D2BF5088A007CA00B /* TabModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E1C2BF5088A007CA00B /* TabModifier.swift */; };
+		ED974E202BF50908007CA00B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E1F2BF50908007CA00B /* Model.swift */; };
+		ED974E222BF50951007CA00B /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E212BF50951007CA00B /* CustomTabView.swift */; };
+		ED974E242BF51030007CA00B /* TabPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E232BF51030007CA00B /* TabPath.swift */; };
+		ED974E262BF51250007CA00B /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E252BF51250007CA00B /* TabView.swift */; };
+		ED974E292BF53507007CA00B /* ChargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E282BF53507007CA00B /* ChargeView.swift */; };
+		ED974E2B2BF53A7C007CA00B /* AnyTransition+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E2A2BF53A7C007CA00B /* AnyTransition+Extension.swift */; };
+		ED974E2D2BF5F138007CA00B /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED974E2C2BF5F138007CA00B /* LogoView.swift */; };
 		EDA57DBF2BF24E0300E5B5DA /* TeslaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA57DBE2BF24E0300E5B5DA /* TeslaApp.swift */; };
-		EDA57DC12BF24E0300E5B5DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA57DC02BF24E0300E5B5DA /* ContentView.swift */; };
+		EDA57DC12BF24E0300E5B5DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA57DC02BF24E0300E5B5DA /* HomeView.swift */; };
 		EDA57DC32BF24E0400E5B5DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA57DC22BF24E0400E5B5DA /* Assets.xcassets */; };
 		EDA57DC62BF24E0400E5B5DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA57DC52BF24E0400E5B5DA /* Preview Assets.xcassets */; };
+		EDEBE73B2BF6150F001FBED2 /* ChargeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBE73A2BF6150F001FBED2 /* ChargeViewModel.swift */; };
+		EDEBE73D2BF617B3001FBED2 /* BatteryPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBE73C2BF617B3001FBED2 /* BatteryPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ED308F782BF3C61100661CB9 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		ED308F7B2BF3F27500661CB9 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		ED308F7D2BF4842100661CB9 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		ED308F802BF4BCAA00661CB9 /* ClimateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateViewModel.swift; sourceTree = "<group>"; };
+		ED75D0412BF27D4A00498778 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		ED75D0442BF2811300498778 /* SelectedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewModifier.swift; sourceTree = "<group>"; };
+		ED75D0472BF2813600498778 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		ED75D04A2BF28A6000498778 /* StartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartedView.swift; sourceTree = "<group>"; };
+		ED75D04D2BF29F6A00498778 /* ClimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateView.swift; sourceTree = "<group>"; };
+		ED974E1C2BF5088A007CA00B /* TabModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModifier.swift; sourceTree = "<group>"; };
+		ED974E1F2BF50908007CA00B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ED974E212BF50951007CA00B /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		ED974E232BF51030007CA00B /* TabPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPath.swift; sourceTree = "<group>"; };
+		ED974E252BF51250007CA00B /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		ED974E282BF53507007CA00B /* ChargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeView.swift; sourceTree = "<group>"; };
+		ED974E2A2BF53A7C007CA00B /* AnyTransition+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnyTransition+Extension.swift"; sourceTree = "<group>"; };
+		ED974E2C2BF5F138007CA00B /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		EDA57DBB2BF24E0300E5B5DA /* Tesla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tesla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA57DBE2BF24E0300E5B5DA /* TeslaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaApp.swift; sourceTree = "<group>"; };
-		EDA57DC02BF24E0300E5B5DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDA57DC02BF24E0300E5B5DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EDA57DC22BF24E0400E5B5DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA57DC52BF24E0400E5B5DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDEBE73A2BF6150F001FBED2 /* ChargeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeViewModel.swift; sourceTree = "<group>"; };
+		EDEBE73C2BF617B3001FBED2 /* BatteryPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +70,109 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED308F7A2BF3ECB000661CB9 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED75D04C2BF29F5200498778 /* СlimateScreen */,
+				EDA57DC02BF24E0300E5B5DA /* HomeView.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		ED308F7F2BF4BC9500661CB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED308F802BF4BCAA00661CB9 /* ClimateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ED308F822BF4D22A00661CB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED75D04D2BF29F6A00498778 /* ClimateView.swift */,
+				ED308F7D2BF4842100661CB9 /* BottomSheet.swift */,
+				ED308F7B2BF3F27500661CB9 /* CustomSlider.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED75D0432BF280EA00498778 /* ViewModifier */ = {
+			isa = PBXGroup;
+			children = (
+				ED75D0442BF2811300498778 /* SelectedViewModifier.swift */,
+				ED974E1C2BF5088A007CA00B /* TabModifier.swift */,
+			);
+			path = ViewModifier;
+			sourceTree = "<group>";
+		};
+		ED75D0462BF2812200498778 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ED75D0472BF2813600498778 /* View+Extension.swift */,
+				ED974E2A2BF53A7C007CA00B /* AnyTransition+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ED75D0492BF28A5000498778 /* StartedScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED75D04A2BF28A6000498778 /* StartedView.swift */,
+				ED75D0412BF27D4A00498778 /* Gradient.swift */,
+				ED308F782BF3C61100661CB9 /* LoadView.swift */,
+				ED974E2C2BF5F138007CA00B /* LogoView.swift */,
+			);
+			path = StartedScreen;
+			sourceTree = "<group>";
+		};
+		ED75D04C2BF29F5200498778 /* СlimateScreen */ = {
+			isa = PBXGroup;
+			children = (
+				ED308F822BF4D22A00661CB9 /* View */,
+				ED308F7F2BF4BC9500661CB9 /* ViewModel */,
+			);
+			path = "СlimateScreen";
+			sourceTree = "<group>";
+		};
+		ED974E1E2BF508F3007CA00B /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				ED974E2F2BF5F280007CA00B /* Model */,
+				ED974E2E2BF5F262007CA00B /* View */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		ED974E272BF534ED007CA00B /* ChargeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EDEBE7392BF614FB001FBED2 /* ViewModel */,
+				EDEBE7382BF614F2001FBED2 /* View */,
+			);
+			path = ChargeScreen;
+			sourceTree = "<group>";
+		};
+		ED974E2E2BF5F262007CA00B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED974E232BF51030007CA00B /* TabPath.swift */,
+				ED974E252BF51250007CA00B /* TabView.swift */,
+				ED974E212BF50951007CA00B /* CustomTabView.swift */,
+				ED308F7A2BF3ECB000661CB9 /* HomeScreen */,
+				ED974E272BF534ED007CA00B /* ChargeScreen */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED974E2F2BF5F280007CA00B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED974E1F2BF50908007CA00B /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EDA57DB22BF24E0200E5B5DA = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +192,11 @@
 		EDA57DBD2BF24E0300E5B5DA /* Tesla */ = {
 			isa = PBXGroup;
 			children = (
+				ED974E1E2BF508F3007CA00B /* TabView */,
+				ED75D0492BF28A5000498778 /* StartedScreen */,
+				ED75D0462BF2812200498778 /* Extension */,
+				ED75D0432BF280EA00498778 /* ViewModifier */,
 				EDA57DBE2BF24E0300E5B5DA /* TeslaApp.swift */,
-				EDA57DC02BF24E0300E5B5DA /* ContentView.swift */,
 				EDA57DC22BF24E0400E5B5DA /* Assets.xcassets */,
 				EDA57DC42BF24E0400E5B5DA /* Preview Content */,
 			);
@@ -65,6 +209,23 @@
 				EDA57DC52BF24E0400E5B5DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDEBE7382BF614F2001FBED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED974E282BF53507007CA00B /* ChargeView.swift */,
+				EDEBE73C2BF617B3001FBED2 /* BatteryPath.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDEBE7392BF614FB001FBED2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDEBE73A2BF6150F001FBED2 /* ChargeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +298,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA57DC12BF24E0300E5B5DA /* ContentView.swift in Sources */,
+				ED974E242BF51030007CA00B /* TabPath.swift in Sources */,
+				ED75D0452BF2811300498778 /* SelectedViewModifier.swift in Sources */,
+				ED308F812BF4BCAA00661CB9 /* ClimateViewModel.swift in Sources */,
+				EDA57DC12BF24E0300E5B5DA /* HomeView.swift in Sources */,
+				ED308F7C2BF3F27500661CB9 /* CustomSlider.swift in Sources */,
+				ED75D04B2BF28A6000498778 /* StartedView.swift in Sources */,
+				EDEBE73B2BF6150F001FBED2 /* ChargeViewModel.swift in Sources */,
+				ED974E292BF53507007CA00B /* ChargeView.swift in Sources */,
+				ED974E2D2BF5F138007CA00B /* LogoView.swift in Sources */,
+				ED974E2B2BF53A7C007CA00B /* AnyTransition+Extension.swift in Sources */,
+				ED75D04E2BF29F6A00498778 /* ClimateView.swift in Sources */,
+				ED974E202BF50908007CA00B /* Model.swift in Sources */,
+				ED308F792BF3C61100661CB9 /* LoadView.swift in Sources */,
+				EDEBE73D2BF617B3001FBED2 /* BatteryPath.swift in Sources */,
+				ED308F7E2BF4842100661CB9 /* BottomSheet.swift in Sources */,
+				ED974E262BF51250007CA00B /* TabView.swift in Sources */,
+				ED75D0482BF2813600498778 /* View+Extension.swift in Sources */,
 				EDA57DBF2BF24E0300E5B5DA /* TeslaApp.swift in Sources */,
+				ED974E1D2BF5088A007CA00B /* TabModifier.swift in Sources */,
+				ED75D0422BF27D4A00498778 /* Gradient.swift in Sources */,
+				ED974E222BF50951007CA00B /* CustomTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +454,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +483,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
