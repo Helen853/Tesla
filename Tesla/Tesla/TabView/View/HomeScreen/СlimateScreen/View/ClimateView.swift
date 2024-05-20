@@ -31,6 +31,7 @@ struct ClimateView: View {
         static let linkText = "Перейти по ссылке"
         static let alertColorName = "darkBlueButton"
     }
+    
     @Environment(\.presentationMode) var presentatin
     
     var body: some View {
@@ -51,7 +52,6 @@ struct ClimateView: View {
                 linkAlert
                     .transition(.zoomAsymInOut)
                     .zIndex(1)
-                    
             }
         }.ignoresSafeArea(edges: .top)
         .navigationBarBackButtonHidden(true)
@@ -148,7 +148,6 @@ struct ClimateView: View {
                         .stroke(selectedColor, style: StrokeStyle(lineWidth: 20, lineCap: .round))
                         .rotationEffect(.degrees(-90))
                         .shadow(color: selectedColor, radius: 20)
-                        
                 }
                 .shadow(color: Color("endColor").opacity(0.04), radius: 30, x:  -50, y:  -10)
             Circle()

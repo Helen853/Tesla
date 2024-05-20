@@ -187,9 +187,7 @@ struct NeumorphismRectangle: ViewModifier {
                         .shadow(color: .black.opacity(0.8), radius: 6, x: 6, y: 6)
                         .shadow(color: .white.opacity(0.1), radius: 5, x: -5, y: -5)
                         .clipShape(RoundedRectangle(cornerRadius: 35).inset(by: 5.1))
-
             }
-            
     }
 }
 

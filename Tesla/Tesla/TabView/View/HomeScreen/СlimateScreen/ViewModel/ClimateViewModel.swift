@@ -16,13 +16,11 @@ final class ClimateViewModel: ObservableObject {
     /// Увеличение температуры
     func addTemperature() {
         guard currentTemperature == maxCount else { return currentTemperature += 1 }
-        
     }
     
     /// Уменьшение температуры
     func reduceTemperature() {
         guard currentTemperature == minCount else { return currentTemperature -= 1 }
-        
     }
     
     /// Обновление температуры

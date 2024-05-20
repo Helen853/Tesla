@@ -35,7 +35,6 @@ struct BottomSheet: View {
             }.padding()
             colorPanel
                 .padding(.horizontal, 35)
-            
             HStack {
                 Text(Constants.onText)
                 Spacer()

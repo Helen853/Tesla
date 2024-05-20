@@ -169,8 +169,6 @@ struct ChargeView: View {
                     .frame(width: 30, height: 30)
                     .neumorphismStrokeSelectedCircleStyle()
             }
-            
-            
         }
     }
     
